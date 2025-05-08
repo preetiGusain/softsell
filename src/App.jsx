@@ -1,4 +1,5 @@
 import './App.css'
+import ContactForm from './components/ContactForm'
 import Hero from "./components/Hero"
 import HowItWorks from './components/HowItWorks'
 import Testimonials from './components/Testimonials'
@@ -11,6 +12,7 @@ function App() {
       <HowItWorks />
       <WhyChooseUs />
       <Testimonials />
+      <ContactForm />
     </div>
   )
 }
