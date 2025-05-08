@@ -1,10 +1,12 @@
 import './App.css'
 import Hero from "./components/Hero"
+import HowItWorks from './components/HowItWorks'
 
 function App() {
   return (
-    <div className="bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white min-h-screen">
+    <div className="bg-white text-neutral-900 min-h-screen">
       <Hero />
+      <HowItWorks />
     </div>
   )
 }
