@@ -4,21 +4,21 @@ import logo from '../assets/logo.png';
 
 function Footer() {
   return (
-    <footer className="bg-neutral-100 py-8 px-4 md:px-8">
+    <footer className="bg-neutral-100 dark:bg-neutral-900 py-8 px-4 md:px-8">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
         {/* Section 1: Logo and About */}
         <div>
           <img src={logo} alt="SoftSell Logo" className="h-12 mb-4" />
-          <h2 className="text-4xl font-bold mb-4">SoftSell</h2>
-          <p className="text-sm text-neutral-600">
+          <h2 className="text-4xl font-bold mb-4 text-neutral-900 dark:text-neutral-100">SoftSell</h2>
+          <p className="text-sm text-neutral-600 dark:text-neutral-400">
             Communication is the foundation on which any great eCommerce Partnership is built. Let’s start talking about how we can grow your online success together. All it takes is an email or a call.
           </p>
         </div>
 
         {/* Section 2: Contact Info */}
         <div className="flex flex-col">
-          <h2 className="font-semibold text-lg mb-4">Contact Us</h2>
-          <div className="text-sm text-neutral-600 space-y-4">
+          <h2 className="font-semibold text-lg mb-4 text-neutral-900 dark:text-neutral-100">Contact Us</h2>
+          <div className="text-sm text-neutral-600 dark:text-neutral-400 space-y-4">
             <div className="flex items-center space-x-2">
               <FaEnvelope className="text-blue-600" />
               <a href="mailto:accounts@payproglobal.com" className="hover:underline">accounts@payproglobal.com</a>
@@ -38,10 +38,10 @@ function Footer() {
 
         {/* Section 3: Links */}
         <div className="flex flex-col">
-          <h2 className="font-semibold text-lg mb-4">Quick Links</h2>
-          <div className="grid grid-cols-2 gap-4 text-sm text-neutral-600">
+          <h2 className="font-semibold text-lg mb-4 text-neutral-900 dark:text-neutral-100">Quick Links</h2>
+          <div className="grid grid-cols-2 gap-4 text-sm text-neutral-600 dark:text-neutral-400">
             <div>
-              <h3 className="font-semibold">Privacy Policy</h3>
+              <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">Privacy Policy</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="hover:underline">Solutions</a></li>
                 <li><a href="#" className="hover:underline">by Use Case</a></li>
@@ -52,7 +52,7 @@ function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold">Resources</h3>
+              <h3 className="font-semibold text-neutral-900 dark:text-neutral-100">Resources</h3>
               <ul className="space-y-2">
                 <li><a href="#" className="hover:underline">Answers</a></li>
                 <li><a href="#" className="hover:underline">How-to Guides</a></li>
@@ -67,7 +67,7 @@ function Footer() {
       </div>
 
       {/* Footer Bottom */}
-      <div className="border-t mt-8 pt-4 text-center text-sm text-neutral-500">
+      <div className="border-t dark:border-neutral-800 mt-8 pt-4 text-center text-sm text-neutral-500 dark:text-neutral-400">
         <p>&copy; Copyright 2006-2025 PayPro Global, Inc. All rights reserved.</p>
       </div>
     </footer>
