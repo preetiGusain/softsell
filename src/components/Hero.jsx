@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
     return (
-        <section className="py-24 px-6 text-center bg-white dark:bg-neutral-900">
+        <section className="py-12 px-6 text-center bg-white dark:bg-neutral-900">
             <motion.div
                 className="text-center max-w-3xl mx-auto space-y-8"
                 initial={{ opacity: 0, y: -40 }}

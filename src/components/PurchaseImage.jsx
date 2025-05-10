@@ -1,0 +1,31 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import purchase from '../assets/purchase.png';
+
+const PurchaseImage = () => {
+  return (
+    <div className="w-full flex justify-center py-12 px-4">
+      <motion.div
+        className="p-4 rounded-2xl bg-white shadow-xl"
+        style={{
+          boxShadow: '0 0 60px rgba(168, 85, 247, 0.3)',
+        }}
+        initial={{ y: 0 }}
+        animate={{ y: [0, -10, 0] }}
+        transition={{
+          repeat: Infinity,
+          duration: 4,
+          ease: 'easeInOut',
+        }}
+      >
+        <img
+          src={purchase}
+          alt="Purchase Interface"
+          className="w-[80vw] max-w-5xl h-auto rounded-xl"
+        />
+      </motion.div>
+    </div>
+  );
+};
+
+export default PurchaseImage;
