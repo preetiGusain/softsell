@@ -91,24 +91,6 @@ The application will be live at `https://preetiGusain.github.io/softsell/`.
 
 ---
 
-## Project Structure
-
-```plaintext
-src
-├── assets          # Static assets like images and logos
-├── components      # Reusable React components
-│   ├── ContactModal    # Contact modal with frontend validation
-│   ├── ChatModal       # Customer chat widget
-│   ├── Header          # Navbar with dropdown menus
-│   ├── Hero            # Landing section with animations
-│   ├── ThemeToggle     # Light/Dark theme toggle button
-├── App.jsx         # Main application component
-├── index.css       # Global styles
-└── main.jsx        # Entry point
-```
-
----
-
 ## Screenshots
 
 ### Hero Section
@@ -125,8 +107,6 @@ src
 ## Future Plans
 
 - **AI-Powered Chat Widget**: Enhance customer support with AI integration.
-- **Analytics Dashboard**: Provide detailed insights into software sales and usage.
-- **Global Payment Support**: Expand payment options for international customers.
 
 ---
 
