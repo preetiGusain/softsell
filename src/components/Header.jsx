@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
+import ThemeToggle from "./ThemeToggle";
 
 const dropdowns = {
     Solutions: {
@@ -35,17 +36,17 @@ const Header = ({ onContactClick }) => {
     const [activeDropdown, setActiveDropdown] = useState(null);
 
     return (
-        <header className="bg-white shadow-sm sticky top-0 z-50">
+        <header className="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-20">
                 {/* Logo and Title */}
                 <div className="flex items-center space-x-3">
                     <img src={logo} alt="SoftSell Logo" className="h-10 w-auto" />
-                    <span className="text-2xl font-bold text-gray-900">SoftSell</span>
+                    <span className="text-2xl font-bold text-gray-900 dark:text-white">SoftSell</span>
                 </div>
 
                 {/* Navigation */}
                 <nav
-                    className="hidden md:flex space-x-6 text-sm font-medium text-gray-700"
+                    className="hidden md:flex space-x-6 text-sm font-medium text-gray-700 dark:text-gray-300"
                     onMouseLeave={() => setActiveDropdown(null)}
                 >
                     {Object.keys(dropdowns).map((key) => (
@@ -55,8 +56,8 @@ const Header = ({ onContactClick }) => {
                             onMouseEnter={() => setActiveDropdown(key)}
                         >
                             <span
-                                className={`cursor-pointer hover:text-purple-600 transition-colors duration-150 ${
-                                    activeDropdown === key ? "text-purple-600 font-semibold" : ""
+                                className={`cursor-pointer hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-150 ${
+                                    activeDropdown === key ? "text-purple-600 dark:text-purple-400 font-semibold" : ""
                                 }`}
                             >
                                 {key}
@@ -64,7 +65,7 @@ const Header = ({ onContactClick }) => {
 
                             {activeDropdown === key && (
                                 <div
-                                    className="absolute top-full mt-4 bg-white shadow-xl rounded-lg py-6 z-40 transition-all duration-300 ease-out"
+                                    className="absolute top-full mt-4 bg-white dark:bg-gray-800 shadow-xl rounded-lg py-6 z-40 transition-all duration-300 ease-out"
                                     style={{
                                         left: "50%",
                                         transform: "translateX(-50%)",
@@ -74,11 +75,11 @@ const Header = ({ onContactClick }) => {
                                     onMouseLeave={() => setActiveDropdown(null)}
                                 >
                                     <div className="max-w-screen-2xl mx-auto px-12 flex text-left">
-                                        <div className="w-2/5 pr-8 border-r border-gray-200">
-                                            <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                                        <div className="w-2/5 pr-8 border-r border-gray-200 dark:border-gray-700">
+                                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                                                 {key}
                                             </h3>
-                                            <p className="text-sm text-gray-600 leading-snug">
+                                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-snug">
                                                 {dropdowns[key].description}
                                             </p>
                                         </div>
@@ -87,14 +88,14 @@ const Header = ({ onContactClick }) => {
                                         <div className="w-3/5 pl-8 flex flex-row gap-x-12">
                                             {Object.entries(dropdowns[key].sections).map(([title, items]) => (
                                                 <div key={title}>
-                                                    <p className="font-semibold text-gray-900 text-sm mb-2">
+                                                    <p className="font-semibold text-gray-900 dark:text-white text-sm mb-2">
                                                         {title}
                                                     </p>
                                                     <ul className="space-y-1">
                                                         {items.map((item) => (
                                                             <li
                                                                 key={item}
-                                                                className="text-sm text-gray-700 hover:text-purple-600 cursor-pointer"
+                                                                className="text-sm text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 cursor-pointer"
                                                             >
                                                                 {item}
                                                             </li>
@@ -111,7 +112,7 @@ const Header = ({ onContactClick }) => {
                     {/* Contact Us */}
                     <div>
                         <span
-                            className="cursor-pointer hover:text-purple-600 transition-colors duration-150"
+                            className="cursor-pointer hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-150"
                             onClick={onContactClick}
                         >
                             Contact Us
@@ -121,7 +122,8 @@ const Header = ({ onContactClick }) => {
 
                 {/* Right Buttons */}
                 <div className="flex items-center space-x-4">
-                    <button className="text-sm font-semibold text-gray-700 hover:text-purple-600">
+                    <ThemeToggle />
+                    <button className="text-sm font-semibold text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400">
                         Log In
                     </button>
                     <button className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm hover:bg-purple-700">

@@ -6,7 +6,7 @@ const PurchaseImage = () => {
   return (
     <div className="w-full flex justify-center py-12 px-4">
       <motion.div
-        className="p-4 rounded-2xl bg-white shadow-xl"
+        className="p-4 rounded-2xl bg-white dark:bg-gray-900 shadow-xl"
         style={{
           boxShadow: '0 0 60px rgba(168, 85, 247, 0.3)',
         }}
@@ -21,7 +21,7 @@ const PurchaseImage = () => {
         <img
           src={purchase}
           alt="Purchase Interface"
-          className="w-[80vw] max-w-5xl h-auto rounded-xl"
+          className="w-[80vw] max-w-5xl h-auto rounded-xl dark:shadow-[0_0_60px_rgba(168,85,247,0.5)]"
         />
       </motion.div>
     </div>

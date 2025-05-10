@@ -8,7 +8,7 @@ const reviews = [
 
 export default function Testimonials() {
     return (
-        <section className="py-16 px-4 bg-amber-50 dark:bg-neutral-900">
+        <section className="py-16 px-4 bg-white dark:bg-neutral-900">
             <h2 className="text-3xl text-center font-semibold mb-12 text-neutral-900 dark:text-neutral-100">
                 Customer Testimonials
             </h2>
